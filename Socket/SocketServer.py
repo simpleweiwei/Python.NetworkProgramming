@@ -6,6 +6,7 @@ backlog = 5
 
 
 def socket_server(port):
+    # AF_INET代表的是ipv4地址，SOCK_STREAM代表的是tcp
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_address = (host, port)
